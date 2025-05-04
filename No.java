@@ -1,29 +1,22 @@
-public class No {
+class No {
     private String nome;
-    private int x;
-    private int y;
+    private boolean capital;
 
-    
-    public No(String nome, int x, int y) {
+    public No(String nome, boolean capital) {
         this.nome = nome;
-        this.x = x;
-        this.y = y;
+        this.capital = capital;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public int getX() {
-        return x;
+    public boolean isCapital() {
+        return capital;
     }
 
-    public int getY() {
-        return y;
-    }
     @Override
     public String toString() {
-        return nome;  // Garante que o nome será mostrado na JComboBox
+        return nome + (capital ? " (Capital)" : "");
     }
 }
-
